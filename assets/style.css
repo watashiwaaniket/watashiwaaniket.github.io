@@ -1,183 +1,126 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
-    margin: 0;
+*{
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-section
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url(bg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 50px;
+    margin: 0;
+    background-color: #f1f1f1;
 }
 
-.container
-{
+.nav{
+    width: 99vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar{
+    width: 1160px;
+    height: 100px;
+    background-image: url(/assets/download.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+}
+
+a{
+    text-decoration: none;
+    z-index: 2;
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    border-color: blueviolet;
+    background-color: #000;
+    color: #f1f1f1;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.background img{
+    pointer-events: none;
+    width: 60vw;
+}
+
+@media only screen and (max-width: 1200px){
+    .nav-bar{
+        width: 100vw;
+    }
+    .background img{
+        width: 98vw;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .background img{
+        width: 75vw;
+    }
+}
+
+main{
+    width: min(1200px, 90vw);
+    margin: auto;
+}
+.slider{
+    margin-top: 16px;
+    margin-bottom: 12px;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
     position: relative;
-    width: calc(100% - 100px);
-    min-height: calc(100vh - 120px);
-    min-height: 300px;
-    /*background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);*/
-    border-radius: 20px;
-    border: 1.4px solid rgba(187, 187, 187, 0.3);
-    background: linear-gradient(226deg, rgba(0, 0, 0, 0.322) 0%, rgba(0, 0, 0, 0.589) 100%);
-    box-shadow: 0px 4px 24px -1px rgba(77, 77, 77, 0.479);
-    /*backdrop-filter: blur(12px);*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
 }
-
-header
-{
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
     position: absolute;
-    top: -40px;
-    right: 20px;
-    left: 20px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1.4px solid rgba(187, 187, 187, 0.3);
-    background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
-    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) )!important;
 }
-
-header .logo
-{
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    font-family: 'Poppins';
+.slider .list .item img{
+    width: 100%;
 }
-header ul
-{
-    display:  flex;
-}
-header ul li
-{
-    list-style: none;
-    margin: 0 10px;
-}
-header ul li a
-{
-    text-decoration: none;
-    font-weight: 500;
-    color: #ffffff;
-    padding: 8px 15px;
-    border-radius: 25px;
-}
-header ul li a:hover,
-header ul li a.active
-{
-    background: linear-gradient(180deg, #1b1b1b73 0%, #86868688 100%);
-    box-shadow: 0px 5px 15px 0px rgba(37, 44, 97, 0.15), 0px 2px 4px 0px rgba(136, 144, 194, 0.20);
-}
-
-.content
-{
-    transform: translateX(-100px);
-    max-width: 850px;
-    border: 1.4px solid rgba(187, 187, 187, 0.3);
-    box-shadow: 0px 4px 20px -1px rgba(0, 0, 0, 0.0);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 60px;
-    padding-left: 110px;
-}
-.content h2
-{
-    font-size: 2.6em;
-    color: #ffffff;
-}
-.content p
-{
-    font-size: 1.2em;
-    color: #ffffff;
-}
-.content li
-{
-    text-decoration: none;
-    color: #fff;
-}
-/*
-.content a
-{
-    display: inline-block;
-    padding: 15px 30px;
-    background: #fff;
-    color: #8a2435;
-    margin-top: 20px;
-    border-radius: 30px;
-    font-size: 1.2em;
-    font-weight: 500;
-    text-decoration: none;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-*/
-
-.imgBx img
-{
-    max-width: 700px;
-    animation: animate 5s linear infinite;
-}
-@keyframes animate 
-{
-    0%,100%
-    {
-        transform: translateY(50px);
-    }
-    50%
-    {
-        transform: translateY(100px);
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
     }
 }
-
-.sci
-{
-    position: absolute;
-    right: -25px;
-    display: flex;
-    width: 70px;
-    height: 280px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #fff;
-    border-radius: 18px;
-    border: 1.4px solid rgba(187, 187, 187, 0.3);
-    background: linear-gradient(146deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.15) 100%);
-    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.20);
-    backdrop-filter: blur(10px);
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
 }
-.sci li
-{
-    text-decoration: none;
-    width: 45px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.slider .item:hover{
+    filter: grayscale(0);
 }
-
-.copyrightText
-{
-    position: absolute;
-    bottom: 30px;
-    right: 150px;
-    color: #ffffff;
-    font-size: 12px;
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
 }

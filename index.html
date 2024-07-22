@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/style.css">
-    </head>
-    <body>
-         <section>
-            <div class="container">
-                <header>
-                    <a href="#" class="logo">Aniket Dhakane</a>
-                    <ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniketDhakane</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-bar">
+            <a href="https://www.linkedin.com/in/aniket-dhakane-9b06a125b/"><button>Connect</button></a>
+        </div>
+    </div>
+    <div class="background">
+        <img src="/assets/landingElement.png" alt="">
+    </div>
 
-                        <li><a href="#" class="active">Info</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="skills.html">Skills</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+    <main>
+
+        <div class="slider">
             
-                    </ul>
-                </header>
-                <div class="content">
-                    <h2>Who am I?</h2><br>
-                    <p>Hello! My name is Aniket Balasaheb Dhakane. <br>
-                        <br>
-                        I am a student at AISSMS COE, Perusing my degree in BE Computer Engineering.
-                        I’m a Software Engineer who loves to explore the world of zero’s and one’s, 
-                        currently I’m acquiring myself with the knowledge of programming by doing various projects and gaining experience. I’m also fascinated by video game industry and it was my dream to always make a powerful wizard who would poof any monster with his sparkling spells in a fantasy mmorpg!
-                        Tho, this dream does not look that far away now.</p>
-                </div> 
-                <div class="imgBx">
-                    <img src="assets/avatar.png">
-                </div>
-                <ul class="sci">
-                    <li><a href="https://github.com/watashiwaaniket"><img src="assets/github-sign.png" height="100%" width="100%"></a></li>
-                    <li><a href="https://www.linkedin.com/in/aniket-dhakane-9b06a125b"><img src="assets/linkedin.png" height="100%" width="100%"></a></li>
-                    <li><a href="https://dribbble.com/hisukurifu"><img src="assets/dribble-big-logo.png" height="100%" width="100%"></a></li>
-                    <li><a href="https://www.instagram.com/aniket_dhakane/"><img src="assets/instagram.png" height="100%" width="100%"></a></li>
-                </ul>
-            </div>
-            <p class="copyrightText">Copyright © 2023 Aniket Dhakane.</p>
-         </section>
+        </div>
 
-    </body>
+        <div class="slider" style="
+            --width: 100px;
+            --height: 50px;
+            --quantity: 10;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="images/slider1_1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="images/slider1_2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="images/slider1_3.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="images/slider1_4.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="images/slider1_5.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="images/slider1_6.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="images/slider1_7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="images/slider1_8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="images/slider1_9.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="images/slider1_10.png" alt=""></div>
+            </div>
+        </div>
+
+        <div class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 200px;
+            --quantity: 9;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><a href="https://github.com/watashiwaaniket/portfolioWithPHP"><img src="images/slider2_1.png" alt=""></a></div>
+                <div class="item" style="--position: 2"><a href="https://github.com/watashiwaaniket/restaurant-app"><img src="images/slider2_2.png" alt=""></a></div>
+                <div class="item" style="--position: 3"><a href="https://github.com/watashiwaaniket/crud_app_in_php"><img src="images/slider2_3.png" alt=""></a></div>
+                <div class="item" style="--position: 4"><a href="https://github.com/watashiwaaniket/tic-tac-toe-react"><img src="images/slider2_4.png" alt=""></a></div>
+                <div class="item" style="--position: 5"><a href="https://github.com/watashiwaaniket/polls"><img src="images/slider2_5.png" alt=""></a></div>
+                <div class="item" style="--position: 6"><a href="https://www.bgmi.club"><img src="images/slider2_6.png" alt=""></a></div>
+                <div class="item" style="--position: 7"><a href="https://replit.com/@AniketDhakane/rostly?v=1"><img src="images/slider2_7.png" alt=""></a></div>
+                <div class="item" style="--position: 8"><a href=""><img src="images/slider2_.png" alt=""></a></div>
+                <div class="item" style="--position: 9"><a href=""><img src="images/slider2_10.png" alt=""></a></div>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
