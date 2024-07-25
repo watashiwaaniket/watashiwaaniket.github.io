@@ -6,6 +6,8 @@
     <title>AniketDhakane</title>
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
     <div class="nav">
@@ -68,5 +70,19 @@
             <p>aniketdhakane3@gmail.com | ©AniketDhakane 2024</p>
         </div>
     </div>
+
+    <div class="loader-wrapper">        
+        <div class="loader">
+            <span class="loader-text">loading</span>
+            <span class="load"></span>
+        </div>   
+    </div>
+
+    <script>
+        $(window).on('load', function(){
+            $('.loader-wrapper').fadeOut();
+        });
+    </script>
+
 </body>
 </html>
