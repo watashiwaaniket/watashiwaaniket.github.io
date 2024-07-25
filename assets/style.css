@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Whyte-Inktrap;
+    src: url(/assets/Whyte-Inktrap-Regular.otf);
+}
+
 *{
     padding: 0;
     margin: 0;
     background-color: #f1f1f1;
+    font-family: Whyte-Inktrap;
 }
 
 .nav{
@@ -66,9 +72,22 @@ button{
 }
 
 main{
-    width: min(1200px, 90vw);
+    width: min(1126px, 98vw);
     margin: auto;
 }
+
+.pheader p{
+    margin-top: 16px;
+    font-size: 24px;
+    text-align: center;
+    font-family: Whyte-Inktrap;
+    font-weight: 700;
+    color: #f1f1f1;
+    background: url(/assets/download.jpg);
+    padding: 6px;
+    border-radius: 8px;
+}
+
 .slider{
     margin-top: 16px;
     margin-bottom: 12px;
@@ -123,4 +142,21 @@ main{
     }to{
         left: 100%;
     }
+}
+
+.foot{
+    width: 99vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
+    width: 1160px;
+    height: 100px;
+    background: url(/assets/download.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
 }
