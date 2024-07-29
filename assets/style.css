@@ -7,7 +7,7 @@
     padding: 0;
     margin: 0;
     background-color: #f1f1f1;
-    font-family: Whyte-Inktrap;
+    font-family: Whyte-Inktrap, Arial, sans-serif;
 }
 
 .nav{
@@ -80,7 +80,7 @@ main{
     margin-top: 16px;
     font-size: 24px;
     text-align: center;
-    font-family: Whyte-Inktrap;
+    font-family: Whyte-Inktrap, Arial, sans-serif;
     font-weight: 700;
     color: #f1f1f1;
     background: url(/assets/download.jpg);
